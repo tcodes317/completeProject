@@ -16,7 +16,12 @@ server.on("request", (req, res)=>{
         res.end(home, "utf-8");
     }
     else if("/gallery" === path.toLocaleLowerCase()){
-        res.end(gallery.replace("%gallery page%", ))
+        if(req.url==="/gallery"){
+            const dBaseArray=dBase.map((prod)=>{
+                return replaceHtml(dCont, prod);
+            })
+            res.end(gallery.replace("%gallery page%", dBaseArray.join(" ")))
+        }
     }
     else if("/contact" === path.toLocaleLowerCase()){
         res.end(contact);
