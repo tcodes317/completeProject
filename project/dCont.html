@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card-cnt{
+            width: 70%;
+            margin: 0 auto;
+        }
+        .card-cnt .card-relative{
+            position: relative;
+        }
+        .card-cnt .card-relative .card{
+            display: flex;
+            justify-content: center;
+        }
+        .card-cnt .card .i{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        .card-cnt .card .ii{
+            margin-left: 15px;
+        }
+        .card-cnt .card .ii > p:nth-of-type(1){
+            margin-top: 0 !important;
+        }
+        .card-cnt .card .ii > *{
+            margin: 35px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-cnt">
+        <div class="card-relative">
+            <div class="card">
+                <div class="i">
+                    <img src="" alt="" />
+                </div>
+                <div class="ii">
+                    <p>%id%</p>
+                    <p>%name%</p>
+                    <p>%age%</p>
+                    <p>%dob%</p>
+                    <p>%occupation%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
